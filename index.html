@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="KB English Dictionary — Built using the Free Dictionary API.">
+    <meta name="keywords" content="HTML, Bootsrap CSS, JavaScript, Dictionary, Free, API">
+    <meta name="author" content="Kim Barcelo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KB Dictionary</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar bg-body-tertiary">
+            <div class="container">
+                <a class="navbar-brand">📘KB English Dictionary</a>
+                <form id="searchWordForm" class="d-flex" role="search">
+                    <input id="wordInput" class="form-control me-2" type="search" placeholder="Search a word here"
+                        aria-label="Search" name="word">
+                    <button class="btn btn-outline-info" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+
+    <main class="mainDisplay">
+        <div class="container">
+            <h1 class="my-4 bg-info-subtle text-info-emphasis" id="wordDisplay">Word</h1>
+        </div>
+
+        <section class="container" id="phoneticsSection" aria-labelledby="phoneticsHeading">
+            <h2 id="phoneticsHeading" class="my-4">🗣️Phonetics</h2>
+            <div id="phoneticsContent">
+                <!-- Content of Phonetics will go here -->
+            </div>
+        </section>
+
+        <section class="container" id="meaningsSection" aria-labelledby="meaningsHeading">
+            <h2 id="meaningsHeading" class="my-4">📖Meanings & Definitions</h2>
+            <div id="meaningsAndDefinitionContent">
+                <!-- Content of Meanings & Definitions will go here -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="container footer">
+        <hr>
+        <p>📘 KB English Dictionary — Built using the <a href="https://dictionaryapi.dev/" target="_blank">Free
+                Dictionary API</a></p>
+        <p>Version: 1.0.0</p>
+        <p>Created by Kim Barcelo</p>
+        <p>Contact: <a href="mailto:kimbarcelo1@gmail.com">kimbarcelo1@gmail.com</a></p>
+        <p>Last updated: April 21, 2025</p>
+    </footer>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Error</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="errorMessageDisplay">
+                Hello, world! This is a toast message.
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
